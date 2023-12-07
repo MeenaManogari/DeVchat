@@ -1,0 +1,13 @@
+.register_main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.register_main > form {
+  background-color: rgb(32, 190, 218);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
