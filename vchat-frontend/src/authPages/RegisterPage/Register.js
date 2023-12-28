@@ -103,7 +103,7 @@ const Register = ({ register }) => {
         <button type="submit">Register</button>
       </form>
       <h5>
-        Existsing User? <Link to="/login">Sign in</Link>{" "}
+        Existing User? <Link to="/login">Sign in</Link>{" "}
       </h5>
     </div>
   );

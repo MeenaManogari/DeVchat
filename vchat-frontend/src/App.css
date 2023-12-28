@@ -2,4 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Grold-Medium.ttf";
+}
+
+@font-face {
+  font-family: "Grold-Medium.ttf";
+  src: url(./assets/fonts/Grold-Medium.ttf);
 }

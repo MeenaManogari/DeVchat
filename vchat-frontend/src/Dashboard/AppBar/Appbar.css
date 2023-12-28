@@ -1,0 +1,43 @@
+.appbar_main {
+  position: sticky;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(88, 196, 187);
+  box-shadow: 0px 5px 10px rgb(4, 0, 8);
+}
+
+#dropdown_img {
+  color: white;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu_content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 70px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 10px;
+}
+
+.menu_content a {
+  color: black;
+  padding: 12px 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu_content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .menu_content {
+  display: block;
+}

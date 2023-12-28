@@ -1,0 +1,17 @@
+.sidebar_main {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(88, 196, 187);
+}
+.sidebar_main button {
+  background: lavender;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.sidebar_main button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}

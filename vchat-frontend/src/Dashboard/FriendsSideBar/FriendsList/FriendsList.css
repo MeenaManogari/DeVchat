@@ -1,0 +1,33 @@
+.friendslist_main > #chat_list {
+  display: flex;
+  gap: 10px;
+  border: none;
+  background: none;
+  align-items: center;
+}
+.friendslist_main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+/* FriendsList.js */
+.friends_list_item_main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Avatar.css */
+.avatar_main {
+  border: none;
+  border-radius: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cornflowerblue;
+}
+.avatar_main .avatar_profile {
+  display: flex;
+  justify-content: center;
+}

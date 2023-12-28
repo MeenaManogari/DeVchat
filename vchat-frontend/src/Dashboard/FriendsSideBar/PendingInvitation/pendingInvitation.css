@@ -1,0 +1,32 @@
+/* PendingInviteListItem.js */
+.pending_invite_list {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* .pending_invite_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* Decision Buttons .js */
+.decision_buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.decision_buttons > button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* PendingInvitations.js */
+.invite_main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

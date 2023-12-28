@@ -1,0 +1,57 @@
+.messenger_main {
+  padding: 10px;
+  display: flex;
+  background-color: rgb(83, 110, 110);
+  height: 100vh;
+}
+
+/* WelcomeMessage.css */
+.welcomemsg_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: rgb(218, 230, 238);
+  font-size: 25px;
+}
+
+/* MessengerContent.css */
+.msgcontent_main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Messages.css */
+.msgs_main {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* MessageHeader.css */
+.msghead_main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Message.css */
+.msgchat_main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.msgchat_main .message_container h4 {
+  color: antiquewhite;
+}
+.message_container h4 span {
+  color: black;
+  margin-left: 10px;
+  font-size: 12px;
+}
