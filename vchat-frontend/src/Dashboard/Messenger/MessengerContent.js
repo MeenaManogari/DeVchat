@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
+import { getDirectChatHistory } from "../../RealTimeCommunication/socketConnection";
 import Messages from "./Messages";
 import NewMessageInput from "./NewMessageInput";
 
 const MessengerContent = ({ chosenChatDetails }) => {
   useEffect(() => {
-    //TODO
-    //fetching chat history from specific user id
+    getDirectChatHistory({
+      receiverUserId: chosenChatDetails.id,
+    });
+    console.log(chosenChatDetails);
   }, [chosenChatDetails]);
 
   return (

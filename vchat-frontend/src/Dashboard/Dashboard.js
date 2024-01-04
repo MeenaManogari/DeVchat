@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Appbar from "./AppBar/Appbar";
 import FriendsSideBar from "./FriendsSideBar/FriendsSideBar";
 import Messenger from "./Messenger/Messenger";
@@ -10,14 +10,19 @@ import { getActions } from "../store/actions/authActions";
 import { connectWithSocketServer } from "../RealTimeCommunication/socketConnection";
 
 const Dashboard = ({ setUserDetails }) => {
+  const isMounted = useRef(false);
   useEffect(() => {
     const userDetails = localStorage.getItem("user");
 
     if (!userDetails) {
       logout();
     } else {
-      setUserDetails(JSON.parse(userDetails));
-      connectWithSocketServer(JSON.parse(userDetails));
+      if (!isMounted.current) {
+        isMounted.current = true;
+        console.log("dd");
+        setUserDetails(JSON.parse(userDetails));
+        connectWithSocketServer(JSON.parse(userDetails));
+      }
     }
   }, []);
 

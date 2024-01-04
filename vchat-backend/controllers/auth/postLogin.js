@@ -27,6 +27,7 @@ const postLogin = async (req, res) => {
         mail: user.mail,
         token: token,
         username: user.username,
+        _id: user._id,
       });
     }
     return res.status(400).send("Invalid Credentials. please try again");
