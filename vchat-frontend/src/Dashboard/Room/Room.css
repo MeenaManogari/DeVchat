@@ -1,0 +1,59 @@
+.room_container {
+  position: absolute;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  background-color: #202225;
+}
+.room_main {
+  display: flex;
+  flex-direction: column;
+}
+
+.minimized_room_style {
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  height: 40vh;
+}
+
+.fullscreen_room_style {
+  width: 81%;
+  height: 90vh;
+}
+
+/* ResizeRoomButton */
+.resize_btn > button > img {
+  height: 25px;
+  width: 25px;
+}
+
+.resize_btn > button {
+  position: relative;
+  background: none;
+  border: none;
+  bottom: 0;
+  right: 0;
+}
+
+/* VideosContainer */
+.vc_main {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* RoomButtons */
+.room_btns_main {
+  height: 15%;
+  width: 100%;
+  background-color: #5865f2;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}

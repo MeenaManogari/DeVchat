@@ -1,4 +1,5 @@
 import io from "socket.io-client";
+import * as roomHandler from "./roomHandler";
 import {
   setPendingFriendsInvitations,
   setFriends,
@@ -42,6 +43,14 @@ export const connectWithSocketServer = (userDetails) => {
     console.log(data);
     updateDirectChatHistoryIfActive(data);
   });
+
+  socket.on("room-create", (data) => {
+    roomHandler.newRoomCreated(data);
+  });
+
+  socket.on("active-rooms", (data) => {
+    roomHandler.updateActiveRooms(data);
+  });
 };
 
 export const sendDirectMessage = (data) => {
@@ -52,4 +61,16 @@ export const sendDirectMessage = (data) => {
 export const getDirectChatHistory = (data) => {
   console.log(data);
   socket.emit("direct-chat-history", data);
+};
+
+export const createNewRoom = () => {
+  socket.emit("room-create");
+};
+
+export const joinRoom = (data) => {
+  socket.emit("room-join", data);
+};
+
+export const leaveRoom = (data) => {
+  socket.emit("room-leave", data);
 };

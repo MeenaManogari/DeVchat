@@ -1,0 +1,10 @@
+/* CameraButton */
+.cam_btn > button {
+  background: none;
+  border: none;
+}
+
+.cam_btn > button > img {
+  width: 25px;
+  height: 25px;
+}

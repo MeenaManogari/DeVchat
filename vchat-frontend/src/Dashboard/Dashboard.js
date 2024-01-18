@@ -8,8 +8,9 @@ import { logout } from "../authPages/Logout/auth";
 import { connect } from "react-redux";
 import { getActions } from "../store/actions/authActions";
 import { connectWithSocketServer } from "../RealTimeCommunication/socketConnection";
+import Room from "./Room/Room";
 
-const Dashboard = ({ setUserDetails }) => {
+const Dashboard = ({ setUserDetails, isUserInRoom }) => {
   const isMounted = useRef(false);
   useEffect(() => {
     const userDetails = localStorage.getItem("user");
@@ -32,10 +33,17 @@ const Dashboard = ({ setUserDetails }) => {
       <FriendsSideBar />
       <div className="board_content">
         <Appbar />
+        {isUserInRoom && <Room />}
         <Messenger />
       </div>
     </div>
   );
+};
+
+const mapStoreStateToProps = ({ room }) => {
+  return {
+    ...room,
+  };
 };
 
 const mapActionsToProps = (dispatch) => {
@@ -44,4 +52,4 @@ const mapActionsToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapActionsToProps)(Dashboard);
+export default connect(mapStoreStateToProps, mapActionsToProps)(Dashboard);
