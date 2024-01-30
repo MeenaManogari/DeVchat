@@ -5,9 +5,11 @@ import { MdOutlineVideocamOff } from "react-icons/md";
 // import VideoOn from "../../../assets/icons/video-on.png";
 // import VideoOff from "../../../assets/icons/video-off.png";
 
-const CameraButton = () => {
+const CameraButton = ({localStream}) => {
   const [cameraEnabled, setCameraEnabled] = useState(true);
+
   const handleToggleCamera = () => {
+    localStream.getVideoTracks()[0].enabled = !cameraEnabled;
     setCameraEnabled(!cameraEnabled);
   };
 

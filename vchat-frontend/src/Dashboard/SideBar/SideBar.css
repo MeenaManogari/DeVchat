@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
   background-color: rgb(88, 196, 187);
 }
 .sidebar_main button {
@@ -12,6 +13,22 @@
   cursor: pointer;
 }
 .sidebar_main button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.create_room_btn {
+  width: 100%;
+}
+
+.create_room_btn > button {
+  background: rgb(124, 124, 235);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+}
+.create_room_btn > button:active {
   transform: scale(0.98);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }

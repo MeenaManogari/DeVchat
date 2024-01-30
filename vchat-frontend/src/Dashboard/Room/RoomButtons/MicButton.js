@@ -6,9 +6,11 @@ import { FiMicOff } from "react-icons/fi";
 // import MicOn from "../../../assets/icons/mic-on.png";
 // import MicOff from "../../../assets/icons/mic-off.png";
 
-const MicButton = () => {
+const MicButton = ({ localStream }) => {
   const [micEnabled, setMicEnabled] = useState(true);
+
   const handleTogglemic = () => {
+    localStream.getAudioTracks()[0].enabled = !micEnabled;
     setMicEnabled(!micEnabled);
   };
 
